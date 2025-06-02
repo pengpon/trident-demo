@@ -1,0 +1,11 @@
+# General
+.DS_Store
+
+# Dependency directories
+node_modules
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map

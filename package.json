@@ -1,0 +1,17 @@
+{
+  "name": "trident-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev": "sass src/styles/index.scss src/styles/index.css --watch",
+    "sass-prod": "sass src/styles/index.scss src/styles/index.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}
