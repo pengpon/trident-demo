@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+}
+
+/* color */
+/* font */
+/* font weight*/
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 18px;
+  background: #65a2e4;
+  box-shadow: 0 0 10px gray;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .toggler-navbar {
+  margin-right: 8px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-size: 20px;
+  background: #ffffff;
+  transition: 0.5s;
+  transform: rotate3d(0, 1, 0, 90deg);
+  transform-origin: left center;
+}
+
+.sidebar.open {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: rgba(0, 0, 0, 0.2470588235);
+}
+
+.sidebar li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 2.5px;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 21px;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+  top: 15px;
+  transform: rotate(135deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  top: 14px;
+  transform: rotate(-135deg);
+}
+
+.head {
+  position: relative;
+  width: 180px;
+  height: 150px;
+  background: #333;
+  clip-path: inset(0px round 61% 39% 45% 0%/65% 38% 42% 35%);
+}
+
+.face {
+  position: absolute;
+  bottom: 30px;
+  width: 190px;
+  height: 90px;
+  background: #fafafa;
+  clip-path: inset(0px round 65% 35% 70% 0%/70% 57% 50% 32%);
+}
+
+.eye {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  clip-path: circle(25%);
+  background: #333;
+}
+
+.bird {
+  position: relative;
+}
+
+.bird::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  right: -40px;
+  bottom: 0;
+  width: 45px;
+  height: 22px;
+  margin: auto;
+  border-radius: 0% 100% 63% 0%/0% 100% 0% 0%;
+  background: #333;
+  transform: rotate(-10deg);
+}
+
+.menu .title {
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=index.css.map */
