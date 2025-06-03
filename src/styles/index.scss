@@ -5,6 +5,9 @@
 @use "utils/variables" as variables;
 @use "components/logo";
 
+.container {
+  font-weight:  map.get(variables.$font-weight, 'regular');
+}
 
 /***** Navbar start *****/
 .navbar {
@@ -135,3 +138,34 @@
   transform: scale(18%);
 }
 /***** LOGO end *****/
+
+/***** Banner start *****/
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  padding: 24px 23px;
+  aspect-ratio: 16 / 9;
+  color: variables.$white;
+  background-position: right center;
+  background-size: 140%;
+  background-repeat: no-repeat;
+  background-image: url("./src/assets/images/banner.jpg");
+
+  .title {
+    width: 76%;
+    margin-bottom: 10px;
+    line-height: 50px;
+    white-space: wrap;
+    font-size: map.get(variables.$font-size, '4xl');
+    font-weight: map.get(variables.$font-weight, 'bold');
+    text-align: right;
+  }
+
+  .description {
+    line-height: 25px;
+    font-size: map.get(variables.$font-size, 'lg');
+  }
+}
+/***** Banner end *****/
