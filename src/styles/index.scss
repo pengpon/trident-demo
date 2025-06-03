@@ -169,3 +169,57 @@
   }
 }
 /***** Banner end *****/
+
+/***** feature start *****/
+.feature {
+  padding: 51px 36px 72px; // from 設計稿
+  background-color: variables.$secondary;
+
+  .item {
+    display: flex;
+    gap: 38px;
+    margin-bottom: 51px; // from 設計稿
+
+    &__title {
+      writing-mode: vertical-lr;
+      font-size: map.get(variables.$font-size, '3xl');
+      font-weight: map.get(variables.$font-weight, 'bold');
+    }
+
+    &__title .text {
+      position: relative;
+      display: inline-block;
+    }
+
+    // decoration
+    &__title .text::before {
+      content: "";
+      position: absolute;
+      display: block;
+      right: -18px;
+      bottom: -10px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: variables.$decoration;
+      opacity: .6;
+    }
+
+    &__title .text::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: -10px;
+      bottom: -2px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: variables.$secondary;
+    }
+
+    &__description {
+      line-height: 137.5%; // from 設計稿計算
+    }
+  }
+}
+/***** feature end *****/
