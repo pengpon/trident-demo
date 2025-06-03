@@ -8,7 +8,6 @@
 
 /***** Navbar start *****/
 .navbar {
-  // position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,98 +19,103 @@
   background: variables.$white;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
   z-index: 9999;
-}
 
-.navbar .toggler-navbar {
-  margin-right: 8px;
-}
+  .title {
+    font-size: map.get(variables.$font-size, 'xl');
+    font-weight: map.get(variables.$font-weight, 'bold');
+  }
 
-.sidebar {
-  position: fixed;
-  top: 88px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  font-size: 20px;
-  background: variables.$white;
-  transition: 0.5s;
-  transform: rotate3d(0, 1, 0, 90deg);
-  transform-origin: left center;
-}
+  .toggler-navbar {
+    margin-right: 8px;
+  }
 
-.sidebar.open {
-  transform: rotate3d(0, 0, 1, 0deg);
-}
+  .sidebar {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    padding-bottom: 45px;
+    text-align: left;
+    font-size: 20px;
+    background: variables.$white;
+    transition: 0.5s;
+    transform-origin: left center;
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
 
-.sidebar ul {
-  text-align: center;
-}
+  .sidebar.open {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
 
-.sidebar li a {
-  display: inline-block;
-  margin-bottom: 22px;
-  color: variables.$black;
-  text-decoration: none;
-}
+  .sidebar-list {
+    text-align: center;
+  }
 
-.sidebar li:hover a,
-.sidebar li.active a {
-  color: variables.$primary;
-}
+  .sidebar-item .link {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: variables.$black;
+    text-decoration: none;
+  }
 
-.sidebar li.active a {
-  position: relative;
-  font-weight: map.get(variables.$font-weight, 'bold');
-}
+  .sidebar .sidebar-item:hover .link,
+  .sidebar .sidebar-item.active .link {
+    color: variables.$primary;
+  }
 
-.sidebar li.active a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: variables.$primary;
-  z-index: 2;
-  display: block;
-}
+  .sidebar .sidebar-item.active .link {
+    position: relative;
+    font-weight: map.get(variables.$font-weight, 'bold');
+  }
 
-.hamburger-menu {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
+  .sidebar .sidebar-item.active .link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: variables.$primary;
+  }
 
-.hamburger-menu span {
-  display: block;
-  width: 100%;
-  height: 4px;
-  left: 0;
-  background: variables.$black;
-  opacity: 1;
-  transform: rotate(0deg);
-  transition: 0.25s ease-in-out;
-  margin-bottom: 5px;
-}
+  .hamburger-menu {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
 
-.hamburger-menu span:nth-child(2) {
-  width: 15px;
-}
+  .hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    background: variables.$black;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    margin-bottom: 5px;
+  }
 
-.hamburger-menu.open span:nth-child(1) {
-  transform: translateY(8px) rotate(135deg);
-}
+  .hamburger-menu span:nth-child(2) {
+    width: 15px;
+  }
 
-.hamburger-menu.open span:nth-child(2) {
-  opacity: 0;
-  left: -100px;
-}
+  .hamburger-menu.open span:nth-child(1) {
+    transform: translateY(8px) rotate(135deg);
+  }
 
-.hamburger-menu.open span:nth-child(3) {
-  transform: translateY(-10px) rotate(-135deg);
+  .hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+    left: -100px;
+  }
+
+  .hamburger-menu.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-135deg);
+  }
 }
 /***** Navbar end *****/
 
