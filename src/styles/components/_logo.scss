@@ -1,6 +1,27 @@
 // 參考: 圖形界面拉圓角
 // https://10015.io/tools/css-border-radius-generator
 
+.bird {
+  position: relative;
+  width: 180px;
+  height: 150px;
+}
+
+// mouth
+.bird::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  right: -40px;
+  bottom: 0;
+  width: 45px;
+  height: 22px;
+  margin: auto;
+  border-radius: 0% 100% 63% 0% / 0% 100% 0% 0%;
+  background: #333;
+  transform: rotate(-10deg);
+}
+
 .head {
   position: relative;
   width: 180px;
@@ -28,25 +49,4 @@
   height: 50px;
   clip-path: circle(25%);
   background: #333;
-}
-
-.bird {
-  position: relative;
-  width: 180px;
-  height: 150px;
-}
-
-// mouth
-.bird::after {
-  content: "";
-  position: absolute;
-  top: -22px;
-  right: -40px;
-  bottom: 0;
-  width: 45px;
-  height: 22px;
-  margin: auto;
-  border-radius: 0% 100% 63% 0% / 0% 100% 0% 0%;
-  background: #333;
-  transform: rotate(-10deg);
 }
