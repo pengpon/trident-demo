@@ -2,16 +2,19 @@
   "name": "trident-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass-dev": "sass src/styles/index.scss index.css --watch",
-    "sass-prod": "sass src/styles/index.scss index.css --style compressed"
+    "sass-prod": "sass src/styles/index.scss index.css --style compressed",
+    "start": "serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.89.1"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
   }
 }
